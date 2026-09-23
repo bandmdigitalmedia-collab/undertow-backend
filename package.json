@@ -1,0 +1,13 @@
+{
+  "name": "undertow-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Interpretation API for the Undertow dream journal app. Holds the Anthropic API key server-side.",
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch --env-file=.env src/server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
