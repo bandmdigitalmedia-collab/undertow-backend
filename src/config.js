@@ -10,6 +10,7 @@ export function loadConfig(env = process.env) {
     sharedSecret: env.APP_SHARED_SECRET || "",
     model: env.ANTHROPIC_MODEL || "claude-sonnet-5",
     baseUrl: (env.ANTHROPIC_BASE_URL || "https://api.anthropic.com").replace(/\/$/, ""),
+    workspaceId: env.ANTHROPIC_WORKSPACE_ID || "",
     port: int(env.PORT, 8787),
     allowedOrigins: (env.ALLOWED_ORIGINS || "https://localhost,capacitor://localhost,http://localhost")
       .split(",")

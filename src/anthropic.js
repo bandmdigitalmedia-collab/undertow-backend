@@ -28,6 +28,7 @@ export async function complete({ config, system, userText, fetchImpl = fetch }) 
           "content-type": "application/json",
           "x-api-key": config.apiKey,
           "anthropic-version": "2023-06-01",
+          ...(config.workspaceId ? { "anthropic-workspace-id": config.workspaceId } : {}),
         },
         body,
         signal: AbortSignal.timeout(config.upstreamTimeoutMs),
